@@ -50,15 +50,15 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+              <a class="nav-link " aria-current="page" href="#">HOME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link " aria-current="page" href="#"
                 >DASHBOARD</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">PARTICIPANT</a>
+              <a class="nav-link active" href="#">PARTICIPANT</a>
             </li>
           </ul>
         </div>
@@ -75,15 +75,28 @@
     <!-- welcome -->
     <div class="container d-flex justify-content-center align-items-center">
       <div class="view">
-          <div class="member"></div>
-          <div class="data">
-            <div
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">leader</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Member 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Member 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Member 3</a>
+          </li>
+        </ul>
+
+        <!-- ~~~ -->
+        <div class="member"></div>
+        <div class="data">
+          <div
             class="member after-add-more d-flex flex-column align-items-center mt-5 mb-5"
             id="member1"
-            >
-            <div class="title mb-5">
-              <h2>Member 1</h2>
-            </div>
+          >
             <div class="card">
               <div class="card-body">
                 <form action="">
@@ -100,9 +113,11 @@
                       />
                     </div>
                   </div>
-            
+
                   <div class="row mb-3">
-                    <label for="Email" class="col-sm-3 col-form-label">Email</label>
+                    <label for="Email" class="col-sm-3 col-form-label"
+                      >Email</label
+                    >
                     <div class="col-sm-8">
                       <input
                         type="email"
@@ -180,38 +195,107 @@
                     </div>
                   </div>
                   <div class="view d-flex justify-content-around pt-3">
-                    <input
-                      type="file"
-                      name="file"
-                      id="file"
-                      class="addcv inputfile"
-                      data-multiple-caption="{count} files selected"
-                      multiple
-                    />
-                    <label for="file"><span>Add CV</span></label>
-            
-                    <input
-                      type="file"
-                      name="file"
-                      id="file"
-                      class="addflazz inputfile"
-                      data-multiple-caption="{count1} files selected"
-                      multiple
-                    />
-                    <label for="file"><span>Add Flazz</span></label>
+                    <div class="cv">
+                      <button
+                        type="button"
+                        class="btn"
+                        data-bs-toggle="modal"
+                        data-bs-target="#view"
+                      >
+                        View CV
+                      </button>
+
+                      <div
+                        class="modal fade"
+                        id="view"
+                        tabindex="-1"
+                        aria-labelledby="viewCV"
+                        aria-hidden="true"
+                      >
+                        <div
+                          class="modal-dialog modal-lg modal-dialog-centered d-flex justify-content-center"
+                        >
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5
+                                class="modal-title fw-bolder"
+                                id="viewCV"
+                                style="font-size: 25px"
+                              >
+                                CV
+                              </h5>
+                            </div>
+                            <div class="modal-body d-flex
+                            justify-content-center"">
+                            <img src="../asset/cv.jpg" alt="" />
+                          </div>
+                          <div class="modal-footer">
+                            <button
+                              type="button"
+                              class="btn"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="submit d-flex justify-content-center mt-3">
-                    <button type="submit" class="btn">Submit</button>
+                  <div class="flazz">
+                    <button
+                      type="button"
+                      class="btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#view"
+                    >
+                      View flazz / ID card
+                    </button>
+
+                    <div
+                      class="modal fade"
+                      id="view"
+                      tabindex="-1"
+                      aria-labelledby="viewflazz"
+                      aria-hidden="true"
+                    >
+                      <div
+                        class="modal-dialog modal-lg modal-dialog-centered d-flex justify-content-center"
+                      >
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5
+                              class="modal-title fw-bolder"
+                              id="viewCV"
+                              style="font-size: 25px"
+                            >
+                              Flazz / ID Card
+                            </h5>
+                          </div>
+                          <div class="modal-body d-flex
+                          justify-content-center"">
+                          <img src="../asset/cv.jpg" alt="" />
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </form>
               </div>
             </div>
-            </div>
           </div>
+        </div>
       </div>
     </div>
 
-  
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -224,4 +308,3 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   </body>
 </html>
-
