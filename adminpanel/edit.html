@@ -16,7 +16,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="view.css" />
+    <link rel="stylesheet" href="edit.css" />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link
       rel="stylesheet"
@@ -195,98 +195,21 @@
                       />
                     </div>
                   </div>
-                  <div class="view d-flex justify-content-around pt-3">
-                    <div class="cv">
-                      <button
-                        type="button"
-                        class="btn"
-                        data-bs-toggle="modal"
-                        data-bs-target="#view"
-                      >
-                        View CV
-                      </button>
 
-                      <div
-                        class="modal fade"
-                        id="view"
-                        tabindex="-1"
-                        aria-labelledby="viewCV"
-                        aria-hidden="true"
-                      >
-                        <div
-                          class="modal-dialog modal-lg modal-dialog-centered d-flex justify-content-center"
-                        >
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5
-                                class="modal-title fw-bolder"
-                                id="viewCV"
-                                style="font-size: 25px"
-                              >
-                                CV
-                              </h5>
-                            </div>
-                            <div class="modal-body d-flex
-                            justify-content-center"">
-                            <img src="../asset/cv.jpg" alt="" />
-                          </div>
-                          <div class="modal-footer">
-                            <button
-                              type="button"
-                              class="btn"
-                              data-bs-dismiss="modal"
-                            >
-                              Close
-                            </button>
-                          </div>
-                        </div>
-                      </div>
+                  <div class="buttonsavecancel d-flex justify-content-end">
+                    <div class="submit">
+                      <input
+                        class="btn btn-primary"
+                        type="submit"
+                        value="Save"
+                      />
                     </div>
-                  </div>
-                  <div class="flazz">
-                    <button
-                      type="button"
-                      class="btn"
-                      data-bs-toggle="modal"
-                      data-bs-target="#view"
-                    >
-                      View flazz / ID card
-                    </button>
-
-                    <div
-                      class="modal fade"
-                      id="view"
-                      tabindex="-1"
-                      aria-labelledby="viewflazz"
-                      aria-hidden="true"
-                    >
-                      <div
-                        class="modal-dialog modal-lg modal-dialog-centered d-flex justify-content-center"
-                      >
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5
-                              class="modal-title fw-bolder"
-                              id="viewCV"
-                              style="font-size: 25px"
-                            >
-                              Flazz / ID Card
-                            </h5>
-                          </div>
-                          <div class="modal-body d-flex
-                          justify-content-center"">
-                          <img src="../asset/cv.jpg" alt="" />
-                        </div>
-                        <div class="modal-footer">
-                          <button
-                            type="button"
-                            class="btn"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                        </div>
-                      </div>
+                    <div class="cancel">
+                      <input
+                        class="btn btn-primary"
+                        type="reset"
+                        value="cancel"
+                      />
                     </div>
                   </div>
                 </form>

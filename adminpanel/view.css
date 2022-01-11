@@ -7,7 +7,7 @@
 body {
   font-family: "Poppins", sans-serif;
   color: #ffff;
-  background-image: linear-gradient(to bottom right, #547ca8, #e4e4e4);
+  background-image: linear-gradient(to bottom right, #548ca8, #e4e4e4);
   min-height: 80rem;
 }
 
@@ -42,10 +42,16 @@ body {
 }
 /* nav-end */
 
+.title > h2 {
+  font-weight: bolder;
+  letter-spacing: 5px;
+  color: #000;
+}
+
 .card {
   width: 70rem;
-  background-color: #f4f7ff;
-  color: #364680;
+  background-color: #ffffff;
+  color: #548CA8;
   padding: 50px;
   border-radius: 45px;
   font-size: 20px;
@@ -65,9 +71,9 @@ body {
   font-size: 20px;
   border-radius: 50px;
   padding: 10px 50px;
-  background: #7382b888;
+  background: #548ca848;
   border: 2px solid white;
-  color: #334257;
+  color: #548ca8;
   font-weight: bold;
 }
 
@@ -120,7 +126,6 @@ inputfile + label {
   margin-top: 6.5rem;
   background-color: #ffff;
 }
-
 
 .nav-link {
   margin: 10px 20px;
