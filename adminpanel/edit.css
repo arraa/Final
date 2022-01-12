@@ -14,13 +14,12 @@
   /* NavBar-start */
   
   .navbar {
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 23px;
+    font-weight: 400;
     background-color: rgba(0, 0, 0, 0.04);
-    letter-spacing: 4px;
+    letter-spacing: 5px;
     /* padding: 18px 50px; */
   }
-  
   .container-md .logout {
     font-size: 20px;
     border-radius: 50px;

@@ -22,7 +22,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="view.css">
+    <link rel="stylesheet" href="home.css" />
+    <link rel="icon" type="image/x-icon" href="../asset/favicon.ico" />
     <title>admin panel</title>
   </head>
   <body>
@@ -30,7 +31,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container-md">
         <div>
-          <a class="navbar-brand" href="#" 
+          <a class="navbar-brand" href="#"
             ><span><i class="fab fa-hackerrank"></i></span
           ></a>
         </div>
@@ -74,13 +75,13 @@
 
     <!-- dashboard-start -->
     <!-- welcome -->
-    <div class="container d-flex justify-content-center align-items-center">
+    <div class="container d-flex justify-content-center align-items-end">
       <div class="dashboard">
         <div class="fitur d-flex justify-content-center">
-          <div class="search">
+          <div class="search m-3" style="width: 54rem">
             <form class="d-flex">
               <input
-                class="form-control me-2"
+                class="form-control search me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
@@ -88,16 +89,16 @@
               <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
             </form>
           </div>
-          <div class="filter">
+          <div class="filter m-3">
             <div class="dropdown">
               <button
-                class="btn btn-secondary dropdown-toggle"
+                class="btn btnfiltersort dropdown-toggle"
                 type="button"
                 id="dropdownMenuButton1"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                filters
+                Filters
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" href="#">All</a></li>
@@ -106,16 +107,16 @@
               </ul>
             </div>
           </div>
-          <div class="sort">
+          <div class="sort m-3">
             <div class="dropdown">
               <button
-                class="btn btn-secondary dropdown-toggle"
+                class="btn btnfiltersort dropdown-toggle"
                 type="button"
                 id="dropdownMenuButton1"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                filters
+                Sort
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" href="#">by name</a></li>
@@ -128,145 +129,139 @@
 
     <!-- content -->
     <div class="container">
-      <table class="table">
+      <table class="table shadow-lg ">
         <thead>
           <tr>
-            <th scope="col">Team List</th>
-            <th scope="col">Status</th>
-            <th scope="col">Action</th>
+            <th scope="col" width="200" class="align-middle text-center">
+              Team List
+            </th>
+            <th scope="col" class="align-middle text-center">Status</th>
+            <th scope="col" width="100" class="align-middle text-center">
+              Action
+            </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="mb-5">
           <tr>
-            <td>Team b</td>
-            <td>Unverified</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Verify
-              </button>
+            <td class="align-middle text-center">
+              <div class="d-inline-flex">
+                <img src="../asset/adminpaneldas.png" alt="" />
+                <p class="align-middle">Team b</p>
+              </div>
+            </td>
+            <td class="align-middle text-center">Unverified</td>
+            <td class="justify-content-center align-items-end">
+              <div class="d-flex">
+                <div class="verify">
+                  <button
+                    type="button"
+                    class="btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Verify
+                  </button>
 
-              <!-- Modal -->
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog  modal-sm modal-dialog-centered ">
-                  <div class="modal-content">
-                    <div class="modal-body text-center fs-5">verify this Group</div>
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-body text-center fs-5">
+                          verify this Group
+                        </div>
 
-                    <div class="d-flex justify-content-around mb-3">
-                      
-                      <button type="button" class="btn btn-primary">
-                       verify
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
+                        <div class="d-flex justify-content-around mb-3">
+                          <button type="button" class="btn">verify</button>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div class="edit">
+                  <a
+                    href="../forgot.html"
+                    class="btn btn-secondary btn-lg"
+                    tabindex="-1"
+                    role="button"
+                    aria-disabled="true"
+                    >view</a
+                  >
+                </div>
               </div>
-              <a href="../forgot.html" class="btn btn-secondary btn-lg " tabindex="-1" role="button" aria-disabled="true">view</a>
             </td>
           </tr>
           <tr>
-            <td>Team b</td>
-            <td>Unverified</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Verify
-              </button>
-
-              <!-- Modal -->
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog  modal-sm modal-dialog-centered ">
-                  <div class="modal-content">
-                    <div class="modal-body text-center fs-5">verify this Group</div>
-
-                    <div class="d-flex justify-content-around mb-3">
-                      
-                      <button type="button" class="btn btn-primary">
-                       verify
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                </div>
+            <td class="align-middle text-center">
+              <div class="d-inline-flex">
+                <img src="../asset/adminpaneldas.png" alt="" />
+                <p class="align-middle">Team b</p>
               </div>
-              <a href="../forgot.html" class="btn btn-secondary btn-lg " tabindex="-1" role="button" aria-disabled="true">view</a>
             </td>
-          </tr>
-          <tr>
-            <td>Team b</td>
-            <td>Unverified</td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Verify
-              </button>
+            <td class="align-middle text-center">Unverified</td>
+            <td class="justify-content-center align-items-end">
+              <div class="d-flex">
+                <div class="verify">
+                  <button
+                    type="button"
+                    class="btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Verify
+                  </button>
 
-              <!-- Modal -->
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog  modal-sm modal-dialog-centered ">
-                  <div class="modal-content">
-                    <div class="modal-body text-center fs-5">verify this Group</div>
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-body text-center fs-5">
+                          verify this Group
+                        </div>
 
-                    <div class="d-flex justify-content-around mb-3">
-                      
-                      <button type="button" class="btn btn-primary">
-                       verify
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
+                        <div class="d-flex justify-content-around mb-3">
+                          <button type="button" class="btn">verify</button>
+                          <button
+                            type="button"
+                            class="btn"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div class="edit">
+                  <a
+                    href="../forgot.html"
+                    class="btn btn-secondary btn-lg"
+                    tabindex="-1"
+                    role="button"
+                    aria-disabled="true"
+                    >view</a
+                  >
+                </div>
               </div>
-              <a href="../forgot.html" class="btn btn-secondary btn-lg " tabindex="-1" role="button" aria-disabled="true">view</a>
             </td>
           </tr>
         </tbody>

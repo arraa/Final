@@ -14,8 +14,9 @@ body {
 /* NavBar-start */
 .navbar {
   font-size: 23px;
-  font-weight: 600;
+  font-weight: 400;
   background-color: rgba(0, 0, 0, 0.04);
+  letter-spacing: 5px;
   /* padding: 18px 50px; */
 }
 
