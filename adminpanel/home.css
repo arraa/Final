@@ -99,3 +99,21 @@ tbody > tr {
 .search{
   height: 55px;
 }
+
+td >.unverified{
+  background-color: #7382b83f !important;
+ 
+  width : 9rem;
+  border-radius: 25px;
+  color: red;
+  padding: 10px 0px;
+}
+
+.verified{
+  background-color: #7382b83f !important;
+ 
+  width : 9rem;
+  border-radius: 25px;
+  color: #67B668;
+  padding: 10px 0px;
+}
