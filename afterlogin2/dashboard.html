@@ -27,52 +27,46 @@
   </head>
   <body>
     <!-- navbar-start -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container-md">
-        <div>
-          <a class="navbar-brand" href="#"
-            ><span><i class="fab fa-hackerrank"></i></span
-          ></a>
-        </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
-                >DASHBOARD</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./payment/payment.html">PAYMENT</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./timeline.html">TIMELINE</a>
-            </li>
-          </ul>
-        </div>
-        <!-- <button type="button" class="logout"></button> -->
-        <a class="button logout" href="../login.html" role="button"
-          ><span><i class="fas fa-sign-in-alt"></i></span> LOGOUT</a
-        >
-      </div>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navigationBar">
+      <div class="container">
+          <a class="navbar-brand" href="#">
+              <span>
+                  <i class="fab fa-hackerrank"></i>
+              </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse  justify-content-center" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >DASHBOARD</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./payment/payment.html">PAYMENT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./timeline.html">TIMELINE</a>
+                  </li>
+                  
+              </ul>
+          </div>
+         <!-- login -->
+          <a href="#">
+              <button class="logout">
+                  <i class="fas fa-sign-in-alt"></i> LOGOUT
+              </button>
+          </a>
 
+  
+      </div>
+  </nav>
     <!-- navabr-end -->
 
     <!-- dashboard-start -->
@@ -390,25 +384,15 @@
                 </div>
               </div>
               <div class="view d-flex justify-content-around pt-3">
-                <input
-                  type="file"
-                  name="file"
-                  id="file"
-                  class="addcv inputfile"
-                  data-multiple-caption="{count} files selected"
-                  multiple
-                />
-                <label for="file"><span>Add CV</span></label>
-
-                <input
-                  type="file"
-                  name="file"
-                  id="file"
-                  class="addflazz inputfile"
-                  data-multiple-caption="{count1} files selected"
-                  multiple
-                />
-                <label for="file"><span>Add Flazz</span></label>
+                <div class="box">
+                  <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1 addcv" data-multiple-caption="{count} files selected" multiple />
+                  <label for="file-1"><span>Add CV</span></label>
+                </div>
+        
+                <div class="box">
+                  <input type="file" name="file-2[]" id="file-2" class="inputfile inputfile-2 addflazz" data-multiple-caption="{count} files selected" multiple />
+                  <label for="file-2"><span>Add Flazz</span></label>
+                </div>
               </div>
               <div class="submit d-flex justify-content-center mt-3">
                 <button type="submit" class="btn">Submit</button>
@@ -458,8 +442,10 @@
           <h4 class="ms-4">085891017100</h4>
         </div>
       </div>
+      
+      
      </div>
-    </div>
+    <!-- </div> -->
 
   </div>
     <script
@@ -473,41 +459,35 @@
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
-      var inputs = document.querySelectorAll(".addcv");
-      Array.prototype.forEach.call(inputs, function (input) {
-        var label = input.nextElementSibling,
-          labelVal = label.innerHTML;
+      'use strict';
 
-        input.addEventListener("change", function (e) {
-          var fileName = "";
-          if (this.files && this.files.length > 1)
-            fileName = (
-              this.getAttribute("data-multiple-caption") || ""
-            ).replace("{count}", this.files.length);
-          else fileName = e.target.value.split("\\").pop();
+;( function ( document, window, index )
+{
+	var inputs = document.querySelectorAll( '.inputfile' );
+	Array.prototype.forEach.call( inputs, function( input )
+	{
+		var label	 = input.nextElementSibling,
+			labelVal = label.innerHTML;
 
-          if (fileName) label.querySelector("span").innerHTML = fileName;
-          else label.innerHTML = labelVal;
-        });
-      });
-      // aaaaa
-      var inputs = document.querySelectorAll(".addflazz");
-      Array.prototype.forEach.call(inputs, function (input) {
-        var label = input.nextElementSibling,
-          labelVal = label.innerHTML;
+		input.addEventListener( 'change', function( e )
+		{
+			var fileName = '';
+			if( this.files && this.files.length > 1 )
+				fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+			else
+				fileName = e.target.value.split( '\\' ).pop();
 
-        input.addEventListener("change", function (e) {
-          var fileName = "";
-          if (this.files && this.files.length > 1)
-            fileName = (
-              this.getAttribute("data-multiple-caption") || ""
-            ).replace("{count1}", this.files.length);
-          else fileName = e.target.value.split("\\").pop();
+			if( fileName )
+				label.querySelector( 'span' ).innerHTML = fileName;
+			else
+				label.innerHTML = labelVal;
+		});
 
-          if (fileName) label.querySelector("span").innerHTML = fileName;
-          else label.innerHTML = labelVal;
-        });
-      });
+		
+		input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
+		input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
+	});
+}( document, window, 0 ));
       // +++++
       $(document).ready(function () {
         $("body").on("click", ".add-more", function () {
@@ -522,6 +502,38 @@
         });
       });
     </script>
-    <script></script>
+    <script>
+      let section = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll("nav a");
+
+window.onscroll = () => {
+  //changing navbar
+  if (window.pageYOffset > 5) {
+    document.getElementById("navigationBar").style.backgroundColor =
+      "rgba(51, 66, 87, 0.4)";
+  } else {
+    document.getElementById("navigationBar").style.backgroundColor =
+      "rgba(51, 66, 87, 0)";
+  }
+
+  //scrollspy
+  section.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach((links) => {
+        links.classList.remove("active");
+        document
+          .querySelector("nav a[href*=" + id + "]")
+          .classList.add("active");
+      });
+    }
+  });
+};
+
+    </script>
   </body>
 </html>
