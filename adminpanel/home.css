@@ -15,9 +15,13 @@ body {
 .navbar-brand {
   width: 200px;
 }
+.navbar .navbar-brand > span {
+  font-size: 40px;
+}
+
 .navbar {
   font-size: 23px;
-  font-weight: 400;
+  font-weight: 600;
   background-color: rgba(0, 0, 0, 0.04);
   letter-spacing: 5px;
   /* padding: 18px 50px; */
@@ -52,10 +56,9 @@ body {
 }
 
 thead {
-
-background-color: #548ca87d;
+  background-color: #548ca87d;
   border-bottom: 8px solid #548ca8ab;
- /* box-shadow: 100px black; */
+  /* box-shadow: 100px black; */
 }
 
 tbody {
@@ -96,28 +99,28 @@ tbody > tr {
   border-radius: 15px;
 }
 
-.search{
+.search {
   height: 55px;
 }
 
-td >.unverified{
+td > .unverified {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #7382b83f !important;
-  width : 10rem;
+  width: 10rem;
   border-radius: 25px;
   color: red;
   padding: 15px;
 }
 
-.verified{
+.verified {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #7382b83f !important;
-  width : 10rem;
+  width: 10rem;
   border-radius: 25px;
-  color: #67B668;
+  color: #67b668;
   padding: 15px;
 }
