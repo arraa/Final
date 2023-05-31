@@ -17,7 +17,6 @@ body {
   font-size: 20px;
   font-weight: 500;
   background-color: rgba(51, 66, 87, 0);
-  animation: appear 1s;
   transition: background-color 0.3s;
 }
 
@@ -110,8 +109,8 @@ body {
   box-shadow: none;
 }
 
-.modal-content{
-  background-color: #F4F7FF !important;
+.modal-content {
+  background-color: #f4f7ff !important;
 }
 
 .modal-footer {
@@ -161,20 +160,18 @@ inputfile + label {
 
 /* cp */
 
-.right{
-  background-color: #F4F7FF;
-  color: #45548B;
+.right {
+  background-color: #f4f7ff;
+  color: #45548b;
   padding: 40px;
   width: 23rem;
   border-radius: 35px;
-  
 }
 
-.left{
-  background-color: #F4F7FF;
-  color: #45548B;
+.left {
+  background-color: #f4f7ff;
+  color: #45548b;
   padding: 40px;
   width: 23rem;
   border-radius: 35px;
-  
 }
